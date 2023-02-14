@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/3f3513d6ba.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="w-3/4 mx-auto bg-green-100">
+    <header class="bg-white p-4 mt-6">
+        <h1 class="text-sky-800 text-5xl font-mono text-center font-semibold">Text Editor <span class="text-lime-300">Version 2.0</span> </h1>
+    </header>
+    <main>
+        <div class="text-box bg-white">
+            <div class="tool-ber py-2 bg-white pl-8 flex items-center justify-around">
+              <div class="basic-tools">
+
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] hover:text-white transition-all rounded mr-4" id="make-bold"><i class="fa-solid fa-bold"></i></button>
+
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] hover:text-white transition-all rounded mr-4" id="make-italic"><i class="fa-solid fa-italic"></i></button>
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] transition-all hover:text-white rounded mr-4" id="make-underline"><i class="fa-solid fa-underline"></i></button>
+              </div>
+              <div class="basic-tools">
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] transition-all hover:text-white rounded mr-4" id="make-left"> <i class="fa-solid fa-align-left"></i></button>
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] transition-all hover:text-white rounded mr-4" id="make-center"> <i class="fa-solid fa-align-center"></i></button>
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] transition-all hover:text-white rounded mr-4" id="make-right"><i class="fa-solid fa-align-right"></i></button>
+              </div>
+              <div class="basic-tools items-center">
+                <input class=" rounded mr-4 " type="color" id="make-color" value="#da373d">
+                <input type="number" id="number" class="w-16 py-1 rounded px-3 border-2 border-sky-600 ">
+                <button class="py-1 text-xl font-bold px-2 hover:bg-[#002233] transition-all hover:text-white rounded mr-4" id="make-uppercase"><i class="fa-solid fa-font"></i></button>
+              </div>
+            </div>
+
+            <div class="mx-auto w-[95%] mt-4 pb-5 px-5 pt-0">
+
+                <textarea class="w-[100%] h-[400px] pl-6 pt-4 border-4 border-gray-900"  name="text" id="text-field" cols="30" rows="10" placeholder="Write ...."></textarea>
+                
+            </div>
+        </div>
+    </main>
+    <script src="./js/tools.js"></script>
+</body>
+
+</html>
